@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Create design</title>
+		<meta name="description" content="Fullscreen Layout with Page Transitions" />
+		<meta name="keywords" content="fullscreen layout, boxes, responsive, page transitions, css transitions, jquery, portfolio, template" />
+        <link href="images/favicon.png" rel="icon" type="image/x-icon" />	
+        <link rel="stylesheet" type="text/css" href="{% static 'website/css/Create_design.css' %}" />
+		<script src="{% static 'website/js/modernizr.custom.js' %}"></script>
+	</head>
+	<body>
+
+		<div class="container">	
+			<div id="bl-main" class="bl-main">
+				<section>
+					<div class="bl-box">
+						<h2 id="living_box">Living Room</h2>
+					</div>
+
+					<div class="bl-content">
+						<div id="navbar">
+							<img src="{% static '' %}website/images/Logo.png" />
+						</div>
+						<ul id="panels">
+							<li id="side_panel">	
+								<button id="button_living">Living Room</button>
+								<ul id="sub_Cat_living" style="list-style: none;">
+									<li  id="living_subCat1"><button id="btn_subCat1">Almirah</button>
+                                       <ul id="living_product_Cat1">
+                                	     <li  id="living_product1"><button id="btn">A</button></li>
+                                	     <li  id="living_product1"><button id="btn">B</button></li>
+                                	     <li  id="living_product1"><button id="btn">C</button></li><br>
+                                	     <li  id="living_product1"><button id="btn">A</button></li>
+                                	     <li  id="living_product1"><button id="btn">B</button></li>
+                                	     <li  id="living_product1"><button id="btn">C</button></li><br>
+                                	     <li  id="living_product1"><button id="btn">A</button></li>
+                                	     <li  id="living_product1"><button id="btn">B</button></li>
+                                	     <li  id="living_product1"><button id="btn">C</button></li>
+                                       </ul>
+									</li>
+                                	<li  id="living_subCat2"><button id="btn_subCat2">TV set</button>
+                                       <ul id="living_product_Cat2">
+                                	     <li  id="living_product2"><button id="btn">A</button></li>
+                                	     <li  id="living_product2"><button id="btn">B</button></li>
+                                	     <li  id="living_product2"><button id="btn">C</button></li><br>
+                                	     <li  id="living_product2"><button id="btn">A</button></li>
+                                	     <li  id="living_product2"><button id="btn">B</button></li>
+                                	     <li  id="living_product2"><button id="btn">C</button></li><br>
+                                	     <li  id="living_product2"><button id="btn">A</button></li>
+                                	     <li  id="living_product2"><button id="btn">B</button></li>
+                                	     <li  id="living_product2"><button id="btn">C</button></li>
+                                       </ul>
+                                	</li>
+								</ul>
+							</li>
+							<li id="main_panel" style="color: black;">Hello</li>
+						</ul>
+						<p></p>
+					</div>
+					<span class="bl-icon bl-icon-close" style="color: white;border: none;"><p id="back_btn" style="color: black;">Back</p></span>
+				</section>
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<h2 id="kitchen_box">Kitchen</h2>
+					</div>
+					<div class="bl-content">
+						<div id="navbar">
+							<img src="{% static '' %}website/images/Logo.png" />
+						</div>
+						<ul id="panels">
+							<li id="side_panel">
+						      <button id="button_kitchen">Kitchen</button>
+								<ul id="sub_Cat_kitchen" style="list-style: none;">
+									<li  id="kitchen_subCat1"><button id="btn_subCat3">Fridge</button>
+                                       <ul id="kitchen_product_Cat1">
+                                	     <li  id="kitchen_product1"><button id="btn">A</button></li>
+                                	     <li  id="kitchen_product1"><button id="btn">B</button></li>
+                                	     <li  id="kitchen_product1"><button id="btn">C</button></li><br>
+                                	     <li  id="kitchen_product1"><button id="btn">A</button></li>
+                                	     <li  id="kitchen_product1"><button id="btn">B</button></li>
+                                	     <li  id="kitchen_product1"><button id="btn">C</button></li><br>
+                                	     <li  id="kitchen_product1"><button id="btn">A</button></li>
+                                	     <li  id="kitchen_product1"><button id="btn">B</button></li>
+                                	     <li  id="kitchen_product1"><button id="btn">C</button></li>
+                                       </ul>
+									</li>
+                                	<li  id="kitchen_subCat2"><button id="btn_subCat4">Chimney</button>
+                                       <ul id="kitchen_product_Cat2">
+                                	     <li  id="kitchen_product2"><button id="btn">A</button></li>
+                                	     <li  id="kitchen_product2"><button id="btn">B</button></li>
+                                	     <li  id="kitchen_product2"><button id="btn">C</button></li><br>
+                                	     <li  id="kitchen_product2"><button id="btn">A</button></li>
+                                	     <li  id="kitchen_product2"><button id="btn">B</button></li>
+                                	     <li  id="kitchen_product2"><button id="btn">C</button></li><br>
+                                	     <li  id="kitchen_product2"><button id="btn">A</button></li>
+                                	     <li  id="kitchen_product2"><button id="btn">B</button></li>
+                                	     <li  id="kitchen_product2"><button id="btn">C</button></li>
+                                       </ul>
+                                	</li>
+								</ul>
+							</li>
+							<li id="main_panel" style="color: black;">Hello</li>
+						</ul>
+					</div>
+					<span class="bl-icon bl-icon-close" style="color: white;border: none;"><p id="back_btn" style="color: black;">Back</p></span>
+				</section>
+				
+				</div>
+			</div>
+		</div><!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="{% static 'website/js/Create_design.js' %}"></script>
+		<script>
+			$(function() {
+				Boxlayout.init();
+				$("#living_product_Cat1,#living_product_Cat2,#kitchen_product_Cat1,#kitchen_product_Cat2, #sub_Cat_living,#sub_Cat_kitchen").hide();
+				$("#button_living").click(function(){
+                    $("#sub_Cat_living").toggle();
+                    $("#living_product_Cat1,#living_product_Cat2,#kitchen_product_Cat1,#kitchen_product_Cat2, #sub_Cat_kitchen").hide();
+				});
+				$("#button_kitchen").click(function(){
+                    $("#sub_Cat_kitchen").toggle();
+                    $("#living_product_Cat1,#living_product_Cat2,#kitchen_product_Cat1,#kitchen_product_Cat2, #sub_Cat_living").hide();
+				});
+				$("#living_subCat1").click(function(){
+                    $("#living_product_Cat1").toggle();
+                    $("#living_product_Cat2,#kitchen_product_Cat1,#kitchen_product_Cat2").hide();
+				});
+				$("#living_subCat2").click(function(){
+                    $("#living_product_Cat2").toggle();
+                    $("#living_product_Cat1,#kitchen_product_Cat1,#kitchen_product_Cat2").hide();
+				});
+	            $("#kitchen_subCat1").click(function(){
+                    $("#kitchen_product_Cat1").toggle();
+                    $("#living_product_Cat2,#living_product_Cat1,#kitchen_product_Cat2").hide();
+				});
+				$("#kitchen_subCat2").click(function(){
+                    $("#kitchen_product_Cat2").toggle();
+                    $("#living_product_Cat1,#kitchen_product_Cat1,#living_product_Cat2").hide();
+				});
+				$("#living_product1").click(function(){
+                    alert("hello");
+				});
+			});
+		</script>
+	</body>
+</html>

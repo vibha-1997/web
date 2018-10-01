@@ -1,0 +1,250 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Josefin+Sans|Josefin+Slab|Libre+Baskerville|Lobster|Lobster+Two|Montserrat|Nunito|Playfair+Display+SC|Poiret+One|Questrial|Quicksand|Roboto|Sanchez|Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Quicksand|Roboto|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Galada|Great+Vibes|Julius+Sans+One|Playball" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}">
+    <style type="text/css">
+	    body{
+	    	background: url("{% static '' %}website/images/wall.jpeg");
+	    }
+	    .jumbotron{
+	    	width: 40%;
+	    	border-radius: 6px;
+	    	margin-top: 5%;
+	    	margin-left: auto;
+            margin-right: auto;
+	    }
+	    #login_head{
+	        background-color: #455a64;
+            width: 60%;
+            padding: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 7px;
+            margin-top: -9rem;
+            color: white;
+            margin-bottom: 5rem;
+        }
+        h3#cart_head {
+            font-size: 3rem;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-top: 1rem;
+        }
+	    #prod_name{
+            margin-left: 30%;
+            margin-top: 1rem;
+	    }
+	    #prod_price{
+	    	margin-top: 1rem;
+	    }
+	    #user_prod{
+	    	margin-left: 5rem;
+	    }
+	    hr#seperator{
+	    	background-color: lightgrey;
+	    	width: 60%;
+	    	height: 1px;
+	    	margin-top: 1rem;
+	    }
+	    #total_head{
+	    	margin-left: 32%;
+	    	margin-top: -3rem;
+	    	padding-top: -2rem;
+	    }
+	    span#total_price{
+	    	margin-left: 24%;
+	    }
+	    #prod_head{
+	    	margin-left: 30%;
+	    	font-size: 20px;
+            margin-top: 3rem;
+	    }
+	    #cost_head{
+	    	margin-left: 15%;
+	    }
+	    button#pay_button{
+            width: 80%;
+            background-color: #455a64;
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            border: none;
+            margin-top: -1rem;
+            margin-left: 10%;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            outline-style: none;
+            text-decoration: none;
+        }
+.container.contact.animated.fadeIn {
+  color: white;
+}
+
+h4#icons{
+    font-weight: bold;
+}
+p#contactLink{
+    margin-bottom: 2rem;
+}
+.fa-instagram {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    color: #455a64;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+.fa-envelope{
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 1.2rem 1.7rem;
+    cursor: pointer;
+    color: #455a64;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+.fa-facebook {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 1.2rem 1.8rem;
+    cursor: pointer;
+    color: #455a64;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+.fa-envelope:hover,.fa-facebook:hover,.fa-instagram:hover{
+    color: white; 
+    background-color: transparent;
+    border: 1px solid white;
+}
+.glyphicon-chevron-up{
+    float: right;
+    padding-right: 2rem;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+.glyphicon-chevron-up:hover{
+    color: white;
+}
+    </style>
+</head>
+ <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5ba8efaa9d44382222fbf225/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+<body>
+<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container-fluid topnav">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="" class="navbar-brand">
+                  <img src="{% static '' %}website/images/Logo.png">
+                </a>
+            </div>
+            
+            <div class="collapse navbar-collapse navbar-right" id="mainNavbar">
+                <ul class="nav navbar-nav" >
+                  <li><a href="e-commerce.html" id="link">Home</a></li>
+                  <li><a href="" id="link">About</a></li>
+                  <li><a href="" id="link">Products</a></li>
+                  <li><a href="" id="link">Contact</a></li>
+                  <li><div class="dropdown">
+                    <p class="dropdown-toggle" data-toggle="dropdown">Account<span class="caret"></span></p>
+                    <ul class="dropdown-menu">
+                      
+                      <li><a href="{% url 'logout' %}" id="link">Logout</a></li>
+                    </ul>
+                  </div></li>
+                </ul>
+            </div>
+        </div>
+  </nav>
+<div class="jumbotron">
+    <div class="panel panel-default" id="login_head">
+       <h3 id="cart_head">CART</h3>
+    </div>
+    <p id="user_prod"> {{ user.username }}'s products </p>
+    <p id="prod_head">Product <span id="cost_head">Cost(Rs.)</span></p>
+    {% if user_products  %}
+      {% for prod in user_products %}
+        <div class="row">
+          <div class="col-lg-3" id="prod_name">  
+             {{prod}}   
+          </div> 
+          <div class="col-lg-3" id="prod_price">
+             {{prod.price}}
+          </div>
+        </div>
+      {% endfor %}
+      <hr id="seperator">
+      <p id="total_head">Total <span id="total_price">{{total_price}}</span></p>
+      <hr id="seperator">
+    {% else %}
+    <p>No products in cart.</p>
+    {% endif %}
+    <a href="http://127.0.0.1:8880/payment" style="color: white;text-decoration: none;"><button id="pay_button"> Click to proceed to payment</button></a>
+</div>
+<div class="container contact animated fadeIn">
+            <div class="row ">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row" align="center">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                  <div>
+                    <a href="#"><i class="fa fa-envelope fa-2x"></i></a><br>
+                    <h4 id="icons">Mail us at</h4>
+                    <p id="contactLink">harishplywood@yahoo.co.in</p>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                  <div>
+                    <a href="#"><i class="fa fa-facebook fa-2x"></i></a><br>
+                    <h4 id="icons">Our Facebook Handle</h4>
+                    <p id="contactLink">https://www.facebook.com/flourish.net/</p>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                  <div>
+                    <a href="#"><i class="fa fa-instagram fa-2x"></i></a><br>
+                    <h4 id="icons">Our Instagram Handle</h4>
+                    <p id="contactLink">https://www.instagram.com/flourishplywood/</p>
+                  </div>
+                </div>
+            </div>
+        <a href="" title="to the top"><i class="glyphicon glyphicon-chevron-up"></i></a>
+</div>
+</body>
+</html>

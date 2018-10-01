@@ -1,0 +1,61 @@
+
+/*  code  */
+
+img#inter{
+    width: 100%;
+    margin-top: -15%;
+}
+#start_design{
+    font-family: 'Julius Sans One', sans-serif;
+    margin-top: 5rem;
+    text-transform: uppercase;
+    color: #455a64;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+#design_panel{
+   margin-top: 3rem;
+   width: 90%;
+   justify-content: center;
+   border-color: #455a64; 
+}
+#panel_room,#panel_kitchen{
+   border: none;
+   margin-top: 5rem;
+   cursor: pointer;
+}
+#img_room,#img_kitchen{
+    border-radius: 2px;
+}
+#head_livingroom,#head_kitchen{
+    text-transform: uppercase;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    color: #455a64;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'Julius Sans One', sans-serif;
+}
+p#design_Quote{
+    font-size: 25px;
+    margin-top: 2rem;
+    font-family: 'Playball', cursive;
+    color: grey;
+}
+img#underline{
+    width: 20%;
+    margin-left: 39.5%;
+    margin-top: 1rem;
+}
+button#create_button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #455a64;
+    border: none;
+    padding: 1rem 6rem;
+    margin-bottom: 3rem;
+    color: white;
+    border-radius: 5px;
+}

@@ -1,0 +1,147 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Josefin+Sans|Josefin+Slab|Libre+Baskerville|Lobster|Lobster+Two|Montserrat|Nunito|Playfair+Display+SC|Poiret+One|Questrial|Quicksand|Roboto|Sanchez|Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Quicksand|Roboto|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Galada|Great+Vibes|Julius+Sans+One|Playball" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}">
+    <style type="text/css">
+        .jumbotron{
+            height: 400px; 
+            width: 90%; 
+            margin-left: 5%;
+        }
+        #amount_head,#purpose_head,#name_head,#email_head,#mobile_head,#transaction_head{
+            font-size: 18px;
+        }
+    </style>
+</head>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5ba8efaa9d44382222fbf225/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+<body>
+<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container-fluid topnav">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="" class="navbar-brand">
+                  <img src="{% static '' %}website/images/Logo.png">
+                </a>
+            </div>
+            
+            <div class="collapse navbar-collapse navbar-right" id="mainNavbar">
+                <ul class="nav navbar-nav" >
+                  <li><a href="e-commerce.html" id="link">Home</a></li>
+                  <li><a href="" id="link">About</a></li>
+                  <li><a href="" id="link">Products</a></li>
+                  <li><a href="" id="link">Contact</a></li>
+                  <li><div class="dropdown">
+                    <p class="dropdown-toggle" data-toggle="dropdown">Account<span class="caret"></span></p>
+                    <ul class="dropdown-menu">
+                      <li><a href="{% url 'logout' %}" id="link">Logout</a></li>
+                    </ul>
+                  </div></li>
+                </ul>
+            </div>
+        </div>
+</nav>   
+<form action="{{ action }}"  name="payuForm" method="post">
+    {% csrf_token %}        
+    <input type="hidden" name="key" value="{{ key }}" />            
+    <input type="hidden" name="hash" value="{{ hash }}"/>            
+    <input type="hidden" name="txnid" value="{{ txnid }}" />
+    <input type="hidden" name="amount" value="{{ amount }}" />
+    <input type="hidden" name="email" value="{{ email }}" />
+    <input type="hidden" name="firstname" value="{{ firstname }}" />
+    <input type="hidden" name="productinfo" value="{{ productinfo }}"/>
+    <input type="hidden" name="surl" value="{{ surl }}"/>
+    <input type="hidden" name="furl" value="{{ furl }}" />
+    <input type="hidden" name="service_provider" value="{{ service_provider }}" />
+<div class="jumbotron">
+    <div class="form-group">
+        <div class="col-md-12 col-sm-12">
+            <p id="amount_head">Amount : <span>Rs. {{amount}}</span></p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12 col-sm-12">
+            <p id="purpose_head">Purpose : <span>{{productinfo}}</span></p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12 col-sm-12">
+            <p id="name_head">Name : <span>{{firstname}}</span></p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12 col-sm-12">
+            <p id="email_head">Email : <span>{{email}}</span></p>
+        </div>
+    </div>            
+    <div class="form-group">
+        <div class="col-md-12 col-sm-12">
+            <p id="mobile_head">Mobile : <span>{{phone}}</span></p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12 col-sm-12">
+            <p id="transaction_head">Transaction ID : <span>{{txnid}}</span></p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12 col-sm-12" style="padding-bottom:10px;padding-top:20px;">
+            <p style="font-size:16px;">After clicking 'Pay Now' button, you will be redirected to PayUMoney Secure Gateway.</p>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="col-md-12 col-sm-12">
+            <input type="submit" style="width: 10%;text-decoration: none;outline-style: none;" class="btn btn-success btn-sm" value="Pay Now">
+        </div>
+    </div>
+</div>
+</form>
+
+<div class="container contact animated fadeIn">
+    <div class="row ">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading" style="color: white;margin-top: 6rem;">Let's Get In Touch!</h2>
+            <hr>
+        </div>
+    </div>
+    <ul id="icons">
+        <li><a href="https://facebook.com"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <li><a href="https://www.google.com/gmail/"><i class="fa fa-google fa-2x"></i></a></li>
+        <li><a href="https://github.com"><i class="fa fa-github fa-2x"></i></a></li>
+        <li><a href="https://linkedin.com"><i class="fa fa-linkedin fa-2x"></i></a></li>
+    </ul>
+    <a href="" title="to the top"><i class="glyphicon glyphicon-chevron-up"></i></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/login.css' %}">
+</head>
+<body>
+  <div class="jumbotron" id="login_box">
+  	 <div class="jumbotron" id="login_head"><h3 align="center">LOGIN</h3></div>
+  	 <form method="POST" action=".">
+                        {% csrf_token %}
+                        {{form}}
+                        <a href="{% url 'welcome' %}"><button id="submit" style="outline-style: none;"> Submit </button></a>
+                        
+      </form>
+  	 
+  	 <p id="registration_check">Already registered? <a href="signUp.html"><button id="signup" style="outline-style: none;">Sign Up</button></a></p>
+  </div>
+</body>
+</html>

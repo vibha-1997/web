@@ -1,0 +1,218 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+body,
+html {
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+}
+body::-webkit-scrollbar {
+     width: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #455a64;
+  outline: 1px solid #90a4ae;
+}
+
+/*  navbar  */
+
+.navbar-brand>img {
+    display: block;
+    width: 10em;
+    margin-top: -1rem;
+    margin-left: 7rem;
+}
+.animated.fadeIn{
+    animation-delay: 0.3s;
+    transition: 0.5 ease;
+}
+#container.animated .fadeIn{
+   animation-delay: 0.3s;
+   transition: 0.5 ease;
+}
+.topnav {
+    font-size: 17px;
+    background-color: white;
+    border: none;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999; 
+    z-index: 800;
+}
+.navbar-default .navbar-nav>li>a{
+    color: #455a64;
+    font-family: 'Quicksand',sans-serif;
+    text-transform: uppercase;
+    outline: none;
+    margin-top: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+p.dropdown-toggle {
+    color: #455a64;
+    font-family: 'Quicksand',sans-serif;
+    text-transform: uppercase;
+    outline: none;
+    margin-top: 4.3rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+p.dropdown-toggle:focus,p.dropdown-toggle:hover{
+    color: #455a64;
+    font-family: 'Quicksand',sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: rgba(234,236,238,0.1);
+    outline: none;
+}
+.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{
+    color: #455a64;
+    font-family: 'Quicksand',sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: rgba(234,236,238,0.1);
+    outline: none;
+}
+.nav >li:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+    margin-bottom: 1.5rem;
+}
+.nav >li:hover:after {
+    width: 100%;
+    background: #455a64;
+}
+.navbar-default .navbar-nav>.active>a {
+    color: grey;
+    background-color: rgb(115,110,95);;
+    border-bottom: 2px solid #117A65 ;
+    transition: 1s ease;
+}
+.navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    border: none;
+    background-color: rgb(115,110,95);;
+    color: grey;
+    transition: 1s ease;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 13px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+ul.dropdown-menu{
+    width: 10%;
+    padding: 0rem -2rem;
+}
+
+/* footer */
+
+.container.contact.animated.fadeIn {
+    background-color: #455a64;
+    padding-bottom: 34rem;
+    height: 32rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 8rem;
+}
+hr{
+  width: 8%;
+  height: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  background-color: white;
+  color: white;
+  border: none; 
+  border-radius: 4px;  
+}
+ul#icons{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+    margin-left: 2rem;
+}
+.fa-linkedin{
+    border: 1px solid #1E1F1E  ;
+    border-radius: 50%;
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    color: white;
+    background-color: #1E1F1E  ;
+    margin-right: 2rem;
+}
+.fa-github {
+     border: 1px solid #1E1F1E  ;
+    border-radius: 50%;
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    color: white;
+    background-color: #1E1F1E  ;
+    margin-right: 2rem;
+}
+.fa-google {
+    border: 1px solid #1E1F1E  ;
+    border-radius: 50%;
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    color: white;
+    background-color: #1E1F1E  ;
+    margin-right: 2rem;
+}
+.fa-facebook {
+    border: 1px solid #1E1F1E;
+    border-radius: 50%;
+    padding: 1.2rem 1.8rem;
+    cursor: pointer;
+    color: white;
+    background-color: #1E1F1E;
+    margin-right: 2rem;
+}
+.fa-google:hover,.fa-facebook:hover,.fa-github:hover,.fa-linkedin:hover{
+    color: white; 
+    background-color: transparent;
+    border: 1px solid white;
+}
+.glyphicon-chevron-up{
+    float: right;
+    padding-right: 2rem;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+.glyphicon-chevron-up:hover{
+    color: grey;
+}

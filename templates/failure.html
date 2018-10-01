@@ -1,0 +1,31 @@
+{% load static %}
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lora|Quicksand|Roboto|Roboto+Slab" rel="stylesheet">
+	<style type="text/css">
+       #transaction{
+       	  margin-top: -30%;
+       	  margin-left: 60%;
+       	  text-transform: uppercase;
+       	  letter-spacing: 2px;
+       	  font-family: 'Quicksand', sans-serif;
+       	  font-weight: bolder;
+       	  font-size: 25px;
+       }
+       span#OOPS{
+       	  font-size: 5rem;
+       }
+	</style>
+</head>
+<body>
+<div style="display:none">
+   	<input type="hidden" name="csrfmiddlewaretoken" value="{% csrf_token %}">
+</div>
+<img id="oop_img" src="{% static '' %}website/images/transaction_fail1.png"/>
+<div id="transaction">
+   <span id="oops">OOPS!!</span><br><br>
+   <p>transaction failed</p>
+   <p id="meassage" style="font-size: 16px;margin-left: 4rem;">Please try again.</p>
+</div>
+</body>
+</html>

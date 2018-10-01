@@ -1,0 +1,13 @@
+{% load static %}
+{% if products_list %}
+    
+    {% for prod in products_list %}
+    <p>{{prod.photo}}</p>
+    <img src= "{% static '' %}website/{{prod.photo}}"/>
+    {% endfor %}
+
+    
+     
+{% else %}
+    <p>No sizes in this category are available.</p>
+{% endif %}
