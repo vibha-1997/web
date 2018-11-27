@@ -1,0 +1,175 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+	color: #666;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	margin:0px;
+	padding:0px;
+}
+
+p {
+	color: #23dbdb;
+	text-decoration: none;
+}
+
+p:hover {
+	color: #000;
+}
+ol, ul {
+	list-style: none;
+	padding:0px;
+	margin:0px;
+}
+.inner {
+	margin: 0 auto;
+	max-width: 940px;
+	padding: 0 40px;
+}
+
+.relative {
+	position: relative;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+
+/* HEADER > MENU */
+#main-menu {
+	float: right;
+	font-size: 0;
+	margin: -7px 0;
+}
+
+#main-menu > li {
+	display: inline-block;
+	margin-left: 30px;
+	padding: 2px 0;
+}
+
+#main-menu > li.parent {
+	background-size: 7px 7px;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+#main-menu > li.parent {
+	padding-left: 14px;
+	cursor: pointer;
+}
+
+#main-menu > li {
+	color: black;
+	font-size: 14px;
+	line-height: 14px;
+	padding: 30px 0;
+	text-decoration:none;
+}
+
+#main-menu > li:hover,
+#main-menu > li.current-menu-item{
+	color: #23dbdb;
+}
+
+/* HEADER > MENU > DROPDOWN */
+#main-menu li {
+	position: relative;
+}
+
+ul.sub-menu ul.sub-menu { /* level 3+ */
+	margin-top: -1px;
+	padding-top: 0;
+	left: 149px;
+	top: 0px;
+}
+
+ul.sub-menu > li {
+	background-color: white;
+	border: 1px solid lightgrey;
+	border-top: none;
+	color: grey;
+	display: block;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 10px 12px;
+}
+
+
+ul.sub-menu > li:first-child {
+	border-top: 3px solid #006064 ;
+}
+
+ul.sub-menu ul.sub-menu > li:first-child {
+	border-top: 1px solid #006064 ;
+}
+
+
+@media all and (max-width: 700px) {
+
+	#main-menu {
+		display: none;
+		float: none;
+	}
+
+	#main-menu li {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+
+	#main-menu > li {
+		margin-top: -1px;
+	}
+
+	#main-menu > li:first-child {
+		margin-top: 0;
+	}
+
+	#main-menu > li > a {
+		background-color: #333;
+		border: 1px solid #444;
+		color: #bbb;
+		display: block;
+		font-size: 14px;
+		padding: 12px !important;
+		padding: 0;
+	}
+
+	#main-menu li > a:hover {
+		background-color: #444; 
+	}
+
+	#main-menu > li.parent {
+		background: none !important;
+		padding: 0;
+	}
+
+	#main-menu > li:hover > a,
+	#main-menu > li.current-menu-item > a {
+		border: 1px solid #444 !important;
+		color: #fff !important;
+	}
+
+	ul.sub-menu {
+		display: block;
+		margin-top: -1px;
+		margin-left: 20px;
+		position: static;
+		padding: 0;
+		width: inherit;
+	}
+
+	ul.sub-menu > li:first-child {
+		border-top: 1px solid #444 !important;
+	}
+
+	ul.sub-menu > li > a.parent {
+		background: #333 !important;
+	}
+}

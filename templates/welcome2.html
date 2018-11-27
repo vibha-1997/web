@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome</title>
-	  <meta charset="utf-8">
+  <title>Flourish-Plywood</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
@@ -13,10 +13,22 @@
     <link href="https://fonts.googleapis.com/css?family=Cookie|Galada|Great+Vibes|Julius+Sans+One|Playball" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'website/css/e-commerce.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'website/css/welcome.css' %}">
+    <link rel="icon" href="{% static '' %}website/images/brand.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/style_c.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/welcome_1.css' %}">
+
+    <!--  css begins -->
+
+    <style type="text/css">
+
+
+    </style>
+
+    <!-- css end -->
+
+
 </head>
+
  <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -30,7 +42,11 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+
 <body>
+
+<!-- navbar begins -->
+
 <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container-fluid topnav">
             
@@ -55,15 +71,21 @@ s0.parentNode.insertBefore(s1,s0);
                   <li><div class="dropdown">
                     <p class="dropdown-toggle" data-toggle="dropdown">Account<span class="caret"></span></p>
                     <ul class="dropdown-menu">
-                                            <li><a href="{% url 'logout' %}" id="link">Logout</a></li>
+                      <li><a href="{% url 'logout' %}" id="link">Logout</a></li>
                     </ul>
                   </div></li>
                 </ul>
             </div>
         </div>
-  </nav>
+</nav>
+
+<!-- navbar ends -->
+
   <img src="{% static '' %}website/images/2.jpg" alt="index image" id="inter">
-  <h3 id="welcome_user">Welcome {{ user.username }}</h3>
+  <h3 id="welcome_user">Welcome, {{ user.username }}</h3>
+
+<!-- design panel -->
+
   <div class="panel panel-default container" id="design">
       <h3 id="start_design" align="center">Start Designing</h3>
       <img src="{% static '' %}website/images/underline.jpeg" id="underline" align="center"/>
@@ -71,34 +93,70 @@ s0.parentNode.insertBefore(s1,s0);
       <div class="row">
           <div class="col-lg-offset-1 col-lg-5 cl-md-offset-1 col-md-5 col-sm-12 col-xs-12">
               <div class="panel panel-default" id="panel_room">
-                  <img src="{% static '' %}website/images/3.jpg" id="img_room" style="width: 46rem;height: 30rem;">
-                  <p id="head_livingroom" align="center">Living Room</p>
+                  <img src="{% static '' %}website/images/6.jpg" id="img_bedroom">
+                  <p id="head_livingroom" align="center">BedRoom</p>
               </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <div class="panel panel-default" id="panel_kitchen">
-                  <img src="{% static '' %}website/images/4.jpg" id="img_kitchen" style="width: 46rem;height: 30rem;">
+                  <img src="{% static '' %}website/images/4.jpg" id="img_kitchen">
                   <p id="head_kitchen" style="margin-left: 37%;">Kitchen</p>
               </div>
           </div>
       </div>
       <a href="{% url  'create_design' %}" style="text-decoration: none;"><button id="create_button" style="outline-style: none;">Create your own design</button></a>
   </div>
+<!-- design panel ends -->
+
+  <!-- footer -->
+
   <div class="container contact animated fadeIn">
-            <div class="row ">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading" style="color: white;margin-top: 6rem;">Let's Get In Touch!</h2>
-                    <hr>
-                </div>
+        <div class="row ">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row" align="center">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div>
+              <a href="#"><i class="fa fa-envelope fa-2x"></i></a><br>
+              <h4 id="icons">Mail us at</h4>
+              <p id="contactLink">harishplywood@yahoo.co.in</p>
             </div>
-            <ul id="icons">
-              <li><a href="https://facebook.com"><i class="fa fa-facebook fa-2x"></i></a></li>
-              <li><a href="https://www.google.com/gmail/"><i class="fa fa-google fa-2x"></i></a></li>
-              <li><a href="https://github.com"><i class="fa fa-github fa-2x"></i></a></li>
-              <li><a href="https://linkedin.com"><i class="fa fa-linkedin fa-2x"></i></a></li>
-            </ul>
-            <a href="" title="to the top"><i class="glyphicon glyphicon-chevron-up"></i></a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div>
+                <a href="#"><i class="fa fa-facebook fa-2x"></i></a><br>
+                <h4 id="icons">Our Facebook Handle</h4>
+                <p id="contactLink">https://www.facebook.com/flourish.net/</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <div>
+                <a href="#"><i class="fa fa-instagram fa-2x"></i></a><br>
+                <h4 id="icons">Our Instagram Handle</h4>
+                <p id="contactLink">https://www.instagram.com/flourishplywood/</p>
+              </div>
+          </div>
+        </div>
+    <a href="http://127.0.0.1:8000/user/" title="to the top"><i class="glyphicon glyphicon-chevron-up"></i></a>
   </div>
-  <script type="text/javascript" src="{% static 'website/js/e-commerce.js' %}"></script>
+
+<!-- footer end -->
+
+<script type="text/javascript" src="{% static 'website/js/e-commerce.js' %}"></script>
+
+<!-- back button disabled -->
+
+<script>
+   history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        history.go(1);
+    };
+</script>
+
+<!-- script end -->
+
 </body>
 </html>

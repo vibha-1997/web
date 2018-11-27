@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome</title>
+	<title>Cart</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
@@ -14,20 +14,21 @@
     <link href="https://fonts.googleapis.com/css?family=Cookie|Galada|Great+Vibes|Julius+Sans+One|Playball" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <link rel="icon" href="{% static '' %}website/images/brand.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}">
     <style type="text/css">
-	    body{
-	    	background: url("{% static '' %}website/images/wall.jpeg");
-	    }
-	    .jumbotron{
-	    	width: 40%;
-	    	border-radius: 6px;
-	    	margin-top: 5%;
-	    	margin-left: auto;
-            margin-right: auto;
-	    }
-	    #login_head{
-	        background-color: #455a64;
+	      body{
+	      	background: url("{% static '' %}website/images/wall.jpeg");
+	      }
+	     .jumbotron{
+	    	   width: 40%;
+	    	   border-radius: 6px;
+	    	   margin-top: 5%;
+	    	   margin-left: auto;
+           margin-right: auto;
+	      }
+	      #login_head{
+	          background-color: #455a64;
             width: 60%;
             padding: 0.5rem;
             margin-left: auto;
@@ -43,39 +44,45 @@
             letter-spacing: 2px;
             margin-top: 1rem;
         }
-	    #prod_name{
+	      #prod_name{
             margin-left: 30%;
             margin-top: 1rem;
-	    }
-	    #prod_price{
-	    	margin-top: 1rem;
-	    }
-	    #user_prod{
-	    	margin-left: 5rem;
-	    }
-	    hr#seperator{
-	    	background-color: lightgrey;
-	    	width: 60%;
-	    	height: 1px;
-	    	margin-top: 1rem;
-	    }
-	    #total_head{
-	    	margin-left: 32%;
-	    	margin-top: -3rem;
-	    	padding-top: -2rem;
-	    }
-	    span#total_price{
-	    	margin-left: 24%;
-	    }
-	    #prod_head{
-	    	margin-left: 30%;
-	    	font-size: 20px;
-            margin-top: 3rem;
-	    }
-	    #cost_head{
-	    	margin-left: 15%;
-	    }
-	    button#pay_button{
+	      }
+	      #prod_price{
+	    	  margin-top: 1rem;
+	      }
+	      #user_prod{
+	    	  margin-left: 5rem;
+          color: #455a64;
+	      }
+	      hr#seperator{
+	    	  background-color: lightgrey;
+	    	  width: 60%;
+	    	  height: 1px;
+	    	  margin-top: 1rem;
+          color: #455a64;
+	      }
+	      #total_head{
+	    	  margin-left: 32%;
+	    	  margin-top: -3rem;
+	    	  padding-top: -2rem;
+          color: #455a64;
+	      }
+	      span#total_price{
+	    	  margin-left: 24%;
+          color: #455a64;
+	      }
+	      #prod_head{
+	    	  margin-left: 30%;
+	    	  font-size: 20px;
+          margin-top: 3rem;
+          color: #455a64;
+	      }
+	      #cost_head{
+	    	   margin-left: 15%;
+           color: #455a64;
+	      }
+	       button#pay_button{
             width: 80%;
             background-color: #455a64;
             color: white;
@@ -86,64 +93,70 @@
             margin-left: 10%;
             margin-bottom: 1rem;
             cursor: pointer;
+            letter-spacing: 1px;
             outline-style: none;
             text-decoration: none;
         }
-.container.contact.animated.fadeIn {
-  color: white;
-}
 
-h4#icons{
-    font-weight: bold;
-}
-p#contactLink{
-    margin-bottom: 2rem;
-}
-.fa-instagram {
-    border: 1px solid white;
-    border-radius: 50%;
-    padding: 1.2rem 1.5rem;
-    cursor: pointer;
-    color: #455a64;
-    background-color: white;
-    margin-bottom: 1rem;
-}
-.fa-envelope{
-    border: 1px solid white;
-    border-radius: 50%;
-    padding: 1.2rem 1.7rem;
-    cursor: pointer;
-    color: #455a64;
-    background-color: white;
-    margin-bottom: 1rem;
-}
-.fa-facebook {
-    border: 1px solid white;
-    border-radius: 50%;
-    padding: 1.2rem 1.8rem;
-    cursor: pointer;
-    color: #455a64;
-    background-color: white;
-    margin-bottom: 1rem;
-}
-.fa-envelope:hover,.fa-facebook:hover,.fa-instagram:hover{
-    color: white; 
-    background-color: transparent;
-    border: 1px solid white;
-}
-.glyphicon-chevron-up{
-    float: right;
-    padding-right: 2rem;
-    font-size: 20px;
-    cursor: pointer;
-    color: white;
-}
-.glyphicon-chevron-up:hover{
-    color: white;
-}
+        /*footer starts*/
+        .container.contact.animated.fadeIn {
+            color: white;
+        }
+        h4#icons{
+           font-weight: bold;
+        }
+        p#contactLink{
+           margin-bottom: 2rem;
+        }
+        .fa-instagram {
+          border: 1px solid white;
+          border-radius: 50%;
+          padding: 1.2rem 1.5rem;
+          cursor: pointer;
+          color: #455a64;
+          background-color: white;
+          margin-bottom: 1rem;
+        }
+       .fa-envelope{
+          border: 1px solid white;
+          border-radius: 50%;
+          padding: 1.2rem 1.7rem;
+          cursor: pointer;
+          color: #455a64;
+          background-color: white;
+          margin-bottom: 1rem;
+        }
+        .fa-facebook {
+          border: 1px solid white;
+          border-radius: 50%;
+          padding: 1.2rem 1.8rem;
+          cursor: pointer;
+          color: #455a64;
+          background-color: white;
+          margin-bottom: 1rem;
+        }
+        .fa-envelope:hover,.fa-facebook:hover,.fa-instagram:hover{
+          color: white; 
+          background-color: transparent;
+          border: 1px solid white;
+        }
+       .glyphicon-chevron-up{
+          float: right;
+          padding-right: 2rem;
+          font-size: 20px;
+          cursor: pointer;
+          color: white;
+        }
+        .glyphicon-chevron-up:hover{
+          color: white;
+        }
+        /* footer ends */
     </style>
+
 </head>
+
  <!--Start of Tawk.to Script-->
+
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
@@ -155,8 +168,13 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+
 <!--End of Tawk.to Script-->
+
 <body>
+
+<!-- navbar begins -->
+
 <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container-fluid topnav">
             
@@ -188,7 +206,10 @@ s0.parentNode.insertBefore(s1,s0);
                 </ul>
             </div>
         </div>
-  </nav>
+</nav>
+
+<!-- navbar ends -->
+
 <div class="jumbotron">
     <div class="panel panel-default" id="login_head">
        <h3 id="cart_head">CART</h3>
@@ -212,39 +233,45 @@ s0.parentNode.insertBefore(s1,s0);
     {% else %}
     <p>No products in cart.</p>
     {% endif %}
-    <a href="http://127.0.0.1:8880/payment" style="color: white;text-decoration: none;"><button id="pay_button"> Click to proceed to payment</button></a>
+    <a href="http://127.0.0.1:8000/payment" style="color: white;text-decoration: none;"><button id="pay_button"> Click to proceed to payment</button></a>
 </div>
-<div class="container contact animated fadeIn">
-            <div class="row ">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr>
-                </div>
+
+
+<!-- footer -->
+
+  <div class="container contact animated fadeIn">
+        <div class="row ">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row" align="center">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div>
+              <a href="#"><i class="fa fa-envelope fa-2x"></i></a><br>
+              <h4 id="icons">Mail us at</h4>
+              <p id="contactLink">harishplywood@yahoo.co.in</p>
             </div>
-            <div class="row" align="center">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                  <div>
-                    <a href="#"><i class="fa fa-envelope fa-2x"></i></a><br>
-                    <h4 id="icons">Mail us at</h4>
-                    <p id="contactLink">harishplywood@yahoo.co.in</p>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                  <div>
-                    <a href="#"><i class="fa fa-facebook fa-2x"></i></a><br>
-                    <h4 id="icons">Our Facebook Handle</h4>
-                    <p id="contactLink">https://www.facebook.com/flourish.net/</p>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                  <div>
-                    <a href="#"><i class="fa fa-instagram fa-2x"></i></a><br>
-                    <h4 id="icons">Our Instagram Handle</h4>
-                    <p id="contactLink">https://www.instagram.com/flourishplywood/</p>
-                  </div>
-                </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div>
+                <a href="#"><i class="fa fa-facebook fa-2x"></i></a><br>
+                <h4 id="icons">Our Facebook Handle</h4>
+                <p id="contactLink">https://www.facebook.com/flourish.net/</p>
             </div>
-        <a href="" title="to the top"><i class="glyphicon glyphicon-chevron-up"></i></a>
-</div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <div>
+                <a href="#"><i class="fa fa-instagram fa-2x"></i></a><br>
+                <h4 id="icons">Our Instagram Handle</h4>
+                <p id="contactLink">https://www.instagram.com/flourishplywood/</p>
+              </div>
+          </div>
+        </div>
+  </div>
+
+  <!-- footer end -->
+
 </body>
 </html>

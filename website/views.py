@@ -13,7 +13,7 @@ from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from website.forms import UserForm, UserProfileForm
+from website.forms import UserForm, UserProfileForm,SignupForm
 from website.tokens import account_activation_token
 from .models import room_category,room_category_size,product_category,products,selection
 from django.http import HttpResponse,HttpResponseRedirect
@@ -25,6 +25,9 @@ from random import randint
 from django.views.decorators.csrf import csrf_exempt
 import constants as constants
 import config as config
+from django.http import JsonResponse
+from django.core import serializers
+from django.core.mail import EmailMessage
 # Create your views here.
 
 def welcome(request):
@@ -60,7 +63,16 @@ def selected_products(request,u_pk,c_pk,p_pk):
         p.save()
         return HttpResponse(product.photo)
     
-    
+@login_required
+def get_dropdown(request,u_pk):
+    r=selection.objects.filter(user_cat=u_pk)
+    context=[]
+    total=0
+    for pro in r:
+        q=products.objects.filter(id=pro.product_pk)
+        jsondata = serializers.serialize('json', q)    
+        context.append(jsondata)
+    return JsonResponse(context, safe=False)     
 #def home(request):
 #    latest_category_list = room_category.objects.all()
 #    context = {'latest_category_list': latest_category_list}
@@ -95,66 +107,48 @@ def remove_from_cart(request,u_pk,p_pk):
     return render(request, 'create_design.html')
 
 
+
 def register(request):
-    #registered = False
-
     if request.method == 'POST':
-        user_form = UserForm(data=request.POST)
-        profile_form = UserProfileForm(data=request.POST)
-
-        if user_form.is_valid() and profile_form.is_valid():
-            user = user_form.save(commit=False)
-            user.set_password(user.password)
+        form = SignupForm(request.POST)
+        form2=UserProfileForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
             user.is_active = False
             user.save()
-
-            profile = profile_form.save()
-            profile.user = user
-            profile.save()
-
             current_site = get_current_site(request)
-            subject = 'activate your account'
-            message = render_to_string('registration/account_activation_email.html', {
-                'user': user,
-                'domain': current_site.domain,
+            message = render_to_string('acc_active_email.html', {
+                'user':user, 'domain':current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
             })
-            user.email_user(subject, message)
-            return redirect('account_activation_sent')
-         #   registered = True
-          #  user_form = UserForm()
-           # profile_form = UserProfileForm()
-        else:
-            print user_form.errors, profile_form.errors
-
+            # Sending activation link in terminal
+            # user.email_user(subject, message)
+            mail_subject = 'Activate your account.'
+            to_email = form.cleaned_data.get('email')
+            email = EmailMessage(mail_subject, message, to=[to_email])
+            email.send()
+            return HttpResponse('Please confirm your email address to complete the registration.')
+            # return render(request, 'acc_active_sent.html')
     else:
-        user_form = UserForm()
-        profile_form = UserProfileForm()
+        form = SignupForm()
+        form2=UserProfileForm()
+    return render(request, 'signup.html', {'form': form,'form2': form2})
 
-    return render(request, 'registration/registration_form.html', {'user_form':user_form, 'profile_form': profile_form})
-
-def account_activation_sent(request):
-    return render(request, 'registration/account_activation_sent.html')
 
 def activate(request, uidb64, token):
     try:
         uid = force_text(urlsafe_base64_decode(uidb64))
         user = User.objects.get(pk=uid)
-    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+    except(TypeError, ValueError, OverflowError, User.DoesNotExist):
         user = None
-
     if user is not None and account_activation_token.check_token(user, token):
         user.is_active = True
-        user.profile.email_confirmed = True
         user.save()
-        login(request, user)
-        return redirect('activation_complete')
+        #login(request, user)
+        return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
     else:
-        return render(request, 'registration/account_activation_invalid.html')
-
-def activation_complete(request):
-    return render(request, 'registration/activation_complete.html')
+        return HttpResponse('Activation link is invalid!')
 
 
 def payment(request):   
@@ -237,4 +231,5 @@ def display_uid(request):
     name=request.user.id
     user=User.objects.get(pk=name)
     return HttpResponse(user.phone_no)
+
 

@@ -1,31 +1,49 @@
 {% load static %}
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Lora|Quicksand|Roboto|Roboto+Slab" rel="stylesheet">
-	<style type="text/css">
+  <title>Transaction Failed</title>
+  <link href="https://fonts.googleapis.com/css?family=Lora|Quicksand|Roboto|Roboto+Slab" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="icon" href="{% static '' %}website/images/brand.png" type="image/png">
+
+  <!-- css begins -->
+  <style type="text/css">
        #transaction{
-       	  margin-top: -30%;
-       	  margin-left: 60%;
-       	  text-transform: uppercase;
-       	  letter-spacing: 2px;
-       	  font-family: 'Quicksand', sans-serif;
-       	  font-weight: bolder;
-       	  font-size: 25px;
+          margin-top: -30%;
+          margin-left: 60%;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-family: 'Quicksand', sans-serif;
+          font-weight: bolder;
+          font-size: 25px;
        }
        span#OOPS{
-       	  font-size: 5rem;
+          font-size: 5rem;
        }
-	</style>
+  </style>
+
+  <!-- css end -->
+
 </head>
+
 <body>
+
 <div style="display:none">
-   	<input type="hidden" name="csrfmiddlewaretoken" value="{% csrf_token %}">
+    <input type="hidden" name="csrfmiddlewaretoken" value="{% csrf_token %}">
 </div>
 <img id="oop_img" src="{% static '' %}website/images/transaction_fail1.png"/>
 <div id="transaction">
    <span id="oops">OOPS!!</span><br><br>
    <p>transaction failed</p>
-   <p id="meassage" style="font-size: 16px;margin-left: 4rem;">Please try again.</p>
+   <p id="meassage" style="font-size: 16px;margin-left: 0rem;text-transform: capitalize;">You will be redirected to website automatically.</p>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        setTimeout(function () {
+           window.location.href = "http://127.0.0.1:8000/user/"; 
+        }, 5000);
+    });
+</script>
 </body>
 </html>

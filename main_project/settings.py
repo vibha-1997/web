@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
+    'social_django',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +70,15 @@ TEMPLATES = [
         },
     },
 ]
+AUTHENTICATION_BACKENDS = (
+ 'social_core.backends.open_id.OpenIdAuth',  # for Google authentication
+ 'social_core.backends.google.GoogleOpenId',  # for Google authentication
+ 'social_core.backends.google.GoogleOAuth2',  # for Google authentication
+ 'social_core.backends.github.GithubOAuth2',  # for Github authentication
+ 'social_core.backends.facebook.FacebookOAuth2',  # for Facebook authentication
+ 
+ 'django.contrib.auth.backends.ModelBackend',
+)
 
 WSGI_APPLICATION = 'main_project.wsgi.application'
 
@@ -116,17 +127,23 @@ USE_L10N = True
 USE_TZ = True
 
 
-ACCOUNT_ACTIVATION_DAYS = 7  # One-week activation window; you may, of course, use a different value.
-REGISTRATION_AUTO_LOGIN = True  # Automatically log the user in.
-REGISTRATION_EMAIL_SUBJECT_PREFIX = '[Django Registration]'
-SEND_ACTIVATION_EMAIL = True
 
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'welcome2'
+LOGOUT_REDIRECT_URL='welcome'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='853754150311-0narv5b36uolb3mucfkpiv54c68lgpgs.apps.googleusercontent.com'  #Paste CLient Key
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'MCT3vJL60Wi1SLDhLvKE1D3F'
+SOCIAL_AUTH_GITHUB_KEY = '21ed1cdca6c20a50513c'#Paste Client ID
+SOCIAL_AUTH_GITHUB_SECRET ='8eff4c8d868b1be492afc06c792e375cfce5513e'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+MEDIA_URL='/media/'
+EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'vvibha2015@gmail.com'
-EMAIL_HOST_PASSWORD = 9897084409
-EMAIL_USE_TLS = True
-LOGIN_REDIRECT_URL='welcome2'
-LOGOUT_REDIRECT_URL='welcome'
+EMAIL_HOST_PASSWORD = '9871635781'
+EMAIL_PORT = 587
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 

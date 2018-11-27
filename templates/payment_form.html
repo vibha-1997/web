@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome</title>
+    <title>Payment</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
@@ -14,7 +14,11 @@
     <link href="https://fonts.googleapis.com/css?family=Cookie|Galada|Great+Vibes|Julius+Sans+One|Playball" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <link rel="icon" href="{% static '' %}website/images/brand.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}">
+
+    <!-- css begins -->
+
     <style type="text/css">
         .jumbotron{
             height: 400px; 
@@ -24,9 +28,70 @@
         #amount_head,#purpose_head,#name_head,#email_head,#mobile_head,#transaction_head{
             font-size: 18px;
         }
+
+        /*footer starts*/
+        .container.contact.animated.fadeIn {
+            color: white;
+        }
+        h4#icons{
+           font-weight: bold;
+        }
+        p#contactLink{
+           margin-bottom: 2rem;
+        }
+        .fa-instagram {
+          border: 1px solid white;
+          border-radius: 50%;
+          padding: 1.2rem 1.5rem;
+          cursor: pointer;
+          color: #455a64;
+          background-color: white;
+          margin-bottom: 1rem;
+        }
+       .fa-envelope{
+          border: 1px solid white;
+          border-radius: 50%;
+          padding: 1.2rem 1.7rem;
+          cursor: pointer;
+          color: #455a64;
+          background-color: white;
+          margin-bottom: 1rem;
+        }
+        .fa-facebook {
+          border: 1px solid white;
+          border-radius: 50%;
+          padding: 1.2rem 1.8rem;
+          cursor: pointer;
+          color: #455a64;
+          background-color: white;
+          margin-bottom: 1rem;
+        }
+        .fa-envelope:hover,.fa-facebook:hover,.fa-instagram:hover{
+          color: white; 
+          background-color: transparent;
+          border: 1px solid white;
+        }
+       .glyphicon-chevron-up{
+          float: right;
+          padding-right: 2rem;
+          font-size: 20px;
+          cursor: pointer;
+          color: white;
+          margin-top: -2rem;
+        }
+        .glyphicon-chevron-up:hover{
+          color: white;
+        }
+        /* footer ends */
+
     </style>
+
+    <!-- css ends -->
+
 </head>
+
 <!--Start of Tawk.to Script-->
+
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
@@ -38,8 +103,13 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+
 <!--End of Tawk.to Script-->
+
 <body>
+
+<!-- navbar beigns -->
+
 <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container-fluid topnav">
             
@@ -71,6 +141,9 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
         </div>
 </nav>   
+
+<!-- navbar ends -->
+
 <form action="{{ action }}"  name="payuForm" method="post">
     {% csrf_token %}        
     <input type="hidden" name="key" value="{{ key }}" />            
@@ -83,6 +156,9 @@ s0.parentNode.insertBefore(s1,s0);
     <input type="hidden" name="surl" value="{{ surl }}"/>
     <input type="hidden" name="furl" value="{{ furl }}" />
     <input type="hidden" name="service_provider" value="{{ service_provider }}" />
+
+
+
 <div class="jumbotron">
     <div class="form-group">
         <div class="col-md-12 col-sm-12">
@@ -122,26 +198,50 @@ s0.parentNode.insertBefore(s1,s0);
     
     <div class="form-group">
         <div class="col-md-12 col-sm-12">
-            <input type="submit" style="width: 10%;text-decoration: none;outline-style: none;" class="btn btn-success btn-sm" value="Pay Now">
+            <input type="submit" style="width: 10%;text-decoration: none;outline-style: none;letter-spacing: 1px;text-transform: uppercase;" class="btn btn-success btn-sm" value="Pay Now">
         </div>
     </div>
 </div>
+
+
+
 </form>
 
-<div class="container contact animated fadeIn">
-    <div class="row ">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-            <h2 class="section-heading" style="color: white;margin-top: 6rem;">Let's Get In Touch!</h2>
+<!-- footer -->
+
+  <div class="container contact animated fadeIn">
+        <div class="row ">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">Let's Get In Touch!</h2>
             <hr>
+          </div>
         </div>
-    </div>
-    <ul id="icons">
-        <li><a href="https://facebook.com"><i class="fa fa-facebook fa-2x"></i></a></li>
-        <li><a href="https://www.google.com/gmail/"><i class="fa fa-google fa-2x"></i></a></li>
-        <li><a href="https://github.com"><i class="fa fa-github fa-2x"></i></a></li>
-        <li><a href="https://linkedin.com"><i class="fa fa-linkedin fa-2x"></i></a></li>
-    </ul>
-    <a href="" title="to the top"><i class="glyphicon glyphicon-chevron-up"></i></a>
-</div>
+        <div class="row" align="center">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div>
+              <a href="#"><i class="fa fa-envelope fa-2x"></i></a><br>
+              <h4 id="icons">Mail us at</h4>
+              <p id="contactLink">harishplywood@yahoo.co.in</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div>
+                <a href="#"><i class="fa fa-facebook fa-2x"></i></a><br>
+                <h4 id="icons">Our Facebook Handle</h4>
+                <p id="contactLink">https://www.facebook.com/flourish.net/</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <div>
+                <a href="#"><i class="fa fa-instagram fa-2x"></i></a><br>
+                <h4 id="icons">Our Instagram Handle</h4>
+                <p id="contactLink">https://www.instagram.com/flourishplywood/</p>
+              </div>
+          </div>
+        </div>
+  </div>
+
+  <!-- footer end -->
+
 </body>
 </html>

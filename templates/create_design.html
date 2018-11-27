@@ -1,119 +1,38 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Create design</title>
-		<meta name="description" content="Fullscreen Layout with Page Transitions" />
-		<meta name="keywords" content="fullscreen layout, boxes, responsive, page transitions, css transitions, jquery, portfolio, template" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="{% static 'website/css/Create_design.css' %}" />
-		<script src="{% static 'website/js/modernizr.custom.js' %}"></script>
-		<style type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Flourish-Plywood</title>
+    <meta name="description" content="Fullscreen Layout with Page Transitions" />
+    <meta name="keywords" content="fullscreen layout, boxes, responsive, page transitions, css transitions, jquery, portfolio, template" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/font-awesome.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/menu.css' %}">   
+    <script type="text/javascript" src="{% static 'website/js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'website/js/function.js' %}"></script>
+    <link rel="icon" href="{% static '' %}website/images/brand.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/create_design.css' %}" />
+    <script src="{% static 'website/js/modernizr.custom.js' %}"></script>
 
-		    .bl-content > ul li#side_panel{
-		    	height: 32rem;
-		    	bottom: 0px;
-		    }
-		     .bl-content > ul li#side_panel {
-                background-color: transparent;
-                border-right: 3px solid lightgrey;
-                margin-top: 1rem;
-            }
-		    .bl-content > ul li#main_panel_living,.bl-content > ul li#main_panel_kitchen {
-               display: inline-block;
-               width: 79%;
-               margin: 0%;
-               height: 30rem;
-            }
-            span.bl-icon.bl-icon-close {
-            	margin-top: -1.5rem;
-            }
-           
+    <!-- css begins -->
 
-            /* cart button*/
-             .dropbtn {
-                color: white;
-                margin-top: -6rem;
-                margin-left: 73rem;
-                padding: 16px;
-                font-size: 20px;
-                border: none;
-                cursor: pointer;
-            }
-            .dropdown {
-                position: relative;
-                display: inline-block;
-            }
-           .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #f1f1f1;
-                min-width: 360px;
-                margin-left: 55rem;
-                margin-top: -1rem;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-            }
-            .dropdown-content a {
-                color: black;
-                padding-top: 2rem;
-                padding-left: 1rem;
-                text-decoration: none;
-                display: block;
-            }
-      
-            .show {display:block;}
+    <style type="text/css">
 
-            hr{
-               width: 90%;
-               height: 1px;
-               margin-right: auto;
-               margin-left: auto;
-               margin-top: 0.5rem;
-               margin-bottom: 0.5rem;
-               background-color: lightgrey;
-               color: lightgrey;
-               border: none; 
-               border-radius: 4px;  
-            }
-            button#checkout_btn{
-            	width: 95%;
-            	background-color: #455a64;
-            	color: white;
-            	padding: 0.5rem;
-            	border-radius: 4px;
-            	margin-top: 1rem;
-            	margin-left: 0.5rem;
-            	margin-bottom: 1rem;
-            	cursor: pointer;
-            }
-            img#cancel_btn {
-               margin-left: 20rem;
-               margin-top: -2rem;
-               margin-bottom: 1rem;
-            }
-
-            /* product buttons */
-			img#btn {
-              width: 3rem;
-              height: 3rem;
-              margin-top: 1.2rem;
-              margin-left: 0.6rem;
-              border: 2px solid lightgrey;
-            }
             
-            #db_image{
-            	width: 10rem;
-            	height: 10rem;
-            }
-             
+            
+            
            
-		</style>
-	</head>
-  <!--Start of Tawk.to Script-->
+    </style>
+
+    <!-- css ends -->
+
+</head>
+
+<!--Start of Tawk.to Script-->
+
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
@@ -125,165 +44,166 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+
 <!--End of Tawk.to Script-->
-	<body>
 
-		<div class="container">	
-			<div id="bl-main" class="bl-main">
-				<section>
-					<div class="bl-box" id="living_room_panel">
-						<h2 id="living_box">LIVING ROOM</h2>
-					</div>
+<body>
 
-					<div class="bl-content">
-						<div id="navbar">
-							<img src="{% static '' %}website/images/Logo.png" />
+<div class="container"> 
+    <div id="bl-main" class="bl-main">
+          <section>
+               <div class="bl-box" id="living_room_panel">
+                  <h2 id="living_box">BEDROOM</h2>
+               </div>
 
-						    <div class="dropdown">
-                                <img class="dropbtn" onclick="myFunction()" src="{% static '' %}website/images/shopping-cart.png" />
-                                <div id="myDropdown" class="dropdown-content">
-                                  <a href="#">Red plywood</a><img id="cancel_btn" src="{% static '' %}website/images/cancel-music.png">
-                                    <hr>
-                                    <a href="#">Blue laminate</a><img id="cancel_btn" src="{% static '' %}website/images/cancel-music.png">
-                                    <hr>
-                                    <a href="#">Green plywood</a><img id="cancel_btn" src="{% static '' %}website/images/cancel-music.png">
-                                    <hr>
-                                  
-                                    
-                                    <button id="checkout_btn">Checkout</button>
-                                </div>
-                            </div>
+               <div class="bl-content">
+                   <div id="navbar">
+                        <img src="{% static '' %}website/images/Logo.png" />
+                        
+                        <div id="wrap">
+                           <div class="inner relative">
+                              <ul id="main-menu">
+                                <li class="parent">
+                                   <a id="drop_head"><img class="dropbtn" src="{% static '' %}website/images/shopping-cart.png" /></a>
+                                   <ul class="sub-menu"></ul>
+                                </li>
+                              </ul>
+                              <div class="clear"></div>
+                          </div>
+                        </div>    
 
-							<span class="bl-icon bl-icon-close" style="color: white;border: none;"><p id="back_btn" style="color: black;"><img src="{% static '' %}website/images/error.png"></p></span>
+                        <span class="bl-icon bl-icon-close" style="color: white;border: none;"><p id="back_btn" style="color: black;">BACK</p></span>
 
-						</div>
-						<ul id="panels">
-							<li id="side_panel">	
-								<button id="button_living">{{latest_category_list.1}}</button>
-								<ul id="sub_Cat_living" style="list-style: none;">
-									<li  id="living_subCat1"><button id="btn_subCat1">{{product_cat.1}}</button>
-                                       <ul id="living_product_Cat1">
-                                         {%for product in product_ids%}
-                                         {% if product.pc_name|stringformat:"s" == product_cat.1|stringformat:"s" %}
-                                	     <li id="living_product1"><img id="btn" class="pro_id_1" data-product={{product.id}} src="{% static '' %}website/images/{{product.photo}}"/>
-                                	     </li>
-                                	     
-                                	     {%endif%}
-                                	     {% endfor %}
-                                	     
-                                       </ul>
-									</li>
-                                	<li  id="living_subCat2"><button id="btn_subCat2">{{product_cat.0}}</button>
-                                       <ul id="living_product_Cat2">
-                                         
-                                         {%for product in product_ids%}
-                                         {% if product.pc_name|stringformat:"s" == product_cat.0|stringformat:"s" %}
-                                	     <li  id="living_product2"><img id="btn" class="pro_id_0" data-product={{product.id}} src="{% static '' %}website/images/{{product.photo}}"/>
-                                	     </li>
-                                	     {%endif%}
-                                	     {% endfor %}
-                                       </ul>
-                                	</li>
-								</ul>
-							</li>
-							<li id="main_panel_living" style="color: black;">
-								<div id="change_img_living" style="width: 10rem;height: 10rem;"></div>
-								<!--<div style="color: black;">Cart</div>-->
-                                
-							</li>
-						</ul>
-						<p></p>
-					</div> 
-					
-				</section>
-				<section id="bl-work-section">
-					<div class="bl-box" id="kitchen_panel">
-						<h2 id="kitchen_box">Kitchen</h2>
-					</div>
-					<div class="bl-content">
-						<div id="navbar">
-							<img src="{% static '' %}website/images/Logo.png" />
+                   </div>
+                   <ul id="panels">
 
-							<div class="dropdown">
-                                <img class="dropbtn" onclick="myFunction()" src="{% static '' %}website/images/shopping-cart.png" />
-                                <div id="myDropdown" class="dropdown-content">
-                                    <a href="#">Red plywood</a><img id="cancel_btn" src="{% static '' %}website/images/cancel-music.png">
-                                    <hr>
-                                    <a href="#">Blue laminate</a><img id="cancel_btn" src="{% static '' %}website/images/cancel-music.png">
-                                    <hr>
-                                    <a href="#">Green plywood</a><img id="cancel_btn" src="{% static '' %}website/images/cancel-music.png">
-                                    <hr>
-                                    <button id="checkout_btn">Checkout</button>
-                                </div>
-                            </div>
+                      <li id="side_panel">  
+                          <button id="button_living">{{latest_category_list.1}}</button>
+                          
+                          <ul id="sub_Cat_living" style="list-style: none;">
+                              <li  id="living_subCat1"><button id="btn_subCat1">{{product_cat.1}}</button>
+                                  <ul id="living_product_Cat1">
+                                      {%for product in product_ids%}
+                                        {% if product.pc_name|stringformat:"s" == product_cat.1|stringformat:"s" %}
+                                          <li id="living_product1"><img id="btn" class="pro_id_1" data-product={{product.id}} src="{% static '' %}website/images/{{product.photo}}"/></li>
+                                        {%endif%}
+                                      {% endfor %}
+                                  </ul>
+                              </li>
+                              <li  id="living_subCat2"><button id="btn_subCat2">{{product_cat.0}}</button>
+                                  <ul id="living_product_Cat2"> 
+                                      {%for product in product_ids%}
+                                        {% if product.pc_name|stringformat:"s" == product_cat.0|stringformat:"s" %}
+                                          <li  id="living_product2"><img id="btn" class="pro_id_0" data-product={{product.id}} src="{% static '' %}website/images/{{product.photo}}"/></li>
+                                        {%endif%}
+                                      {% endfor %}
+                                  </ul>
+                              </li>
+                          </ul>
+                      </li> 
+                      <li id="main_panel_living" style="color: black;">
+                          <img src="{% static '' %}website/images/Kitchen-Layout.png" id="background-layer">
+                          <div id="change_img_almirah" style="z-index: 100;"></div>
+                          <div id="change_img_tvset" style="z-index: 100;"></div>
+                          <div id="change_img_bed" style="z-index: 100;"></div>
+                      </li>
+                  </ul>
+               </div>     
+          </section>
 
-							<span class="bl-icon bl-icon-close" style="color: white;border: none;"><p id="back_btn" style="color: black;"><img src="{% static '' %}website/images/error.png"></p></span>
+          <section id="bl-work-section">
+                <div class="bl-box" id="kitchen_panel">
+                   <h2 id="kitchen_box">Kitchen</h2>
+                </div>
 
-						</div>
-						<ul id="panels">
-							<li id="side_panel">
-						      <button id="button_kitchen">{{latest_category_list.0}}</button>
-								<ul id="sub_Cat_kitchen" style="list-style: none;">
-									<li  id="kitchen_subCat1"><button id="btn_subCat3">{{product_cat.2}}</button>
+                <div class="bl-content">
+                    <div id="navbar">
+                        <img src="{% static '' %}website/images/Logo.png" />
+
+                        <div id="wrap">
+                           <div class="inner relative">
+                              <ul id="main-menu">
+                                <li class="parent">
+                                   <a id="drop_head"><img class="dropbtn" src="{% static '' %}website/images/shopping-cart.png" /></a>
+                                   <ul class="sub-menu"></ul>
+                                </li>
+                              </ul>
+                              <div class="clear"></div>
+                          </div>
+                        </div>    
+
+                        <span class="bl-icon bl-icon-close" style="color: white;border: none;"><p id="back_btn" style="color: black;">BACK</p></span>
+                    </div>
+                    <ul id="panels">
+                        <li id="side_panel">
+                           <button id="button_kitchen">{{latest_category_list.0}}</button>
+                              <ul id="sub_Cat_kitchen" style="list-style: none;">
+                                  <li  id="kitchen_subCat1"><button id="btn_subCat3">{{product_cat.2}}</button>
                                        <ul id="kitchen_product_Cat1">
                                          {%for product in product_ids%}
-                                         {% if product.pc_name|stringformat:"s" == product_cat.2|stringformat:"s" %}
-                                	     <li  id="kitchen_product1"><img id="btn" class="pro_id_2" data-product={{product.id}} src="{% static '' %}website/images/{{product.photo}}"/></li>
-                                	     {%endif%}
-                                	     {% endfor %}
-                                	     
+                                           {% if product.pc_name|stringformat:"s" == product_cat.2|stringformat:"s" %}
+                                              <li  id="kitchen_product1"><img id="btn" class="pro_id_2" data-product={{product.id}} src="{% static '' %}website/images/{{product.photo}}"/></li>
+                                           {%endif%}
+                                         {% endfor %}
                                        </ul>
-									</li>
-                                	<li  id="kitchen_subCat2"><button id="btn_subCat4">{{product_cat.3}}</button>
+                                  </li>
+                                  <li  id="kitchen_subCat2"><button id="btn_subCat4">{{product_cat.3}}</button>
                                        <ul id="kitchen_product_Cat2">
                                          {%for product in product_ids%}
-                                         {% if product.pc_name|stringformat:"s" == product_cat.3|stringformat:"s" %}
-                                	     <li  id="kitchen_product2"><img id="btn" class="pro_id_3" data-product={{product.id}} src="{% static '' %}website/images/{{product.photo}}"/></li>
-                                	     {%endif%}
-                                	     {% endfor %}
-                                	     
+                                            {% if product.pc_name|stringformat:"s" == product_cat.3|stringformat:"s" %}
+                                                <li  id="kitchen_product2"><img id="btn" class="pro_id_3" data-product={{product.id}} src="{% static '' %}website/images/{{product.photo}}"/></li>
+                                            {%endif%}
+                                         {% endfor %}
+                                       
                                        </ul>
-                                	</li>
-								</ul>
-							</li>
-							<li id="main_panel_kitchen" style="color: black;">
-								<div id="change_img_kitchen" style="width: 10rem;height: 10rem;"></div>
+                                  </li>
+                              </ul>
+                        </li>
+              
+                       <li id="main_panel_kitchen" style="color: black;">
+                           <img src="{% static '' %}website/images/Kitchen-Layout.png" id="background-layer">
+                           <div id="change_img_fridge" style="z-index: 100;"></div>
+                           <div id="change_img_chimney" style="z-index: 100;"></div>
+                       </li>
+                    </ul>
+                </div>
+          </section>
 
-							</li>
-						</ul>
-					</div>
+      </div>
+    </div>
+  </div>
+    
+  <script src="{% static 'website/js/Create_design.js' %}"></script>
+       
+      <!-- database image script -->
 
-				</section>
-				
-				</div>
-			</div>
-		</div><!-- /container -->
-		
-		<script src="{% static 'website/js/Create_design.js' %}"></script>
-        
         <script type="text/javascript">
-                                	                                  	     
+                                                                       
            $(document).on('click','.pro_id_1',function(){
                 var value= $(this).attr('data-product');
-                                	   
-                var url="http://127.0.0.1:8880/user_selected_product/{{user.id}}/{{product_cat.1.id}}/"+value;
-                                	      	
+                                     
+                var url="http://127.0.0.1:8000/user_selected_product/{{user.id}}/{{product_cat.1.id}}/"+value;
+                                          
                 $.ajax({
-					type: "GET",
-					url: url,
-					success:
-					    function(data){
-					   	    console.log(url);
-					   	    console.log(value);
-					   	    var a=data;
-					   	    console.log(a); 
-					   	    $("#change_img_living").html('<img id="db_image" src={% static '' %}website/images/'+a+'>');   
-				        }
-				});
+                   type: "GET",
+                   url: url,
+                   success:
+                      function(data){
+                         console.log(url);
+                         console.log(value);
+                         var a=data;
+                         console.log(a); 
+                         $("#change_img_almirah").html('<img id="db_image_1" src={% static '' %}website/images/'+a+'>');   
+                      }
+                });
+                   
                 $("#living_product_Cat1").show();
+                $('ul.sub-menu').hide();
+                
                 $(document).on('click','#living_room_panel',function(){
                     $("#sub_Cat_living").hide();
                     $("#db_image").hide();
+                    $('ul.sub-menu').hide();
                 });
                                               
             });
@@ -291,128 +211,213 @@ s0.parentNode.insertBefore(s1,s0);
             $(document).on('click','.pro_id_0',function(){
                 var value= $(this).attr('data-product');
 
-                var url="http://127.0.0.1:8880/user_selected_product/{{user.id}}/{{product_cat.0.id}}/"+value;
+                var url="http://127.0.0.1:8000/user_selected_product/{{user.id}}/{{product_cat.0.id}}/"+value;
                 
                 $.ajax({
-					type: "GET",
-					url: url,
-					success:
-					    function(data){
-					   	    console.log(url);
-					   	    console.log(value);
-					   	    var a=data;
-					   	    console.log(a); 
-					   	    $("#change_img_living").html('<img id="db_image" src={% static '' %}website/images/'+a+'>');   
-					    }
-				});
+                   type: "GET",
+                   url: url,
+                   success:
+                     function(data){
+                        console.log(url);
+                        console.log(value);
+                        var a=data;
+                        console.log(a); 
+                        $("#change_img_tvset").html('<img id="db_image_2" src={% static '' %}website/images/'+a+'>');   
+                     }
+                });
+
                 $("#living_product_Cat2").show();
+                $('ul.sub-menu').hide();
+
                 $(document).on('click','#living_room_panel',function(){
                     $("#sub_Cat_living").hide();
                     $("#db_image").hide();
+                    $('ul.sub-menu').hide();
                 });
             });
 
             $(document).on('click','.pro_id_2',function(){
                 var value= $(this).attr('data-product');
 
-                var url="http://127.0.0.1:8880/user_selected_product/{{user.id}}/{{product_cat.2.id}}/"+value;
-                                	         
+                var url="http://127.0.0.1:8000/user_selected_product/{{user.id}}/{{product_cat.2.id}}/"+value;
+                                           
                 $.ajax({
-					type: "GET",
-					url: url,
-					success:
-					    function(data){
-					   	    console.log(url);
-					   	    console.log(value);
-					   	    var a=data;
-					   	    console.log(a); 
-					   	    $("#change_img_kitchen").html('<img id="db_image" src={% static '' %}website/images/'+a+'>');   
-					    }
-				});
+                  type: "GET",
+                  url: url,
+                  success:
+                     function(data){
+                        console.log(url);
+                        console.log(value);
+                        var a=data;
+                        console.log(a); 
+                        $("#change_img_fridge").html('<img id="db_image_3" src={% static '' %}website/images/'+a+'>');   
+                     }
+                });
+
                 $("#kitchen_product_Cat1").show();
+                $('ul.sub-menu').hide();
+
                 $(document).on('click','#kitchen_panel',function(){
                     $("#sub_Cat_kitchen").hide();
                     $("#db_image").hide();
+                    $('ul.sub-menu').hide();
                 });
             });
-                                	      
+                                        
             $(document).on('click','.pro_id_3',function(){
                 var value= $(this).attr('data-product');
-                                	      	
-                var url="http://127.0.0.1:8880/user_selected_product/{{user.id}}/{{product_cat.3.id}}/"+value;
-                                	          
+                                          
+                var url="http://127.0.0.1:8000/user_selected_product/{{user.id}}/{{product_cat.3.id}}/"+value;
+                                            
                 $.ajax({
-					type: "GET",
-					url: url,
-			        success:
-					    function(data){
-					   	    console.log(url);
-					   	    console.log(value);
-					   	    var a=data;
-					   	    console.log(a); 
-					   	    $("#change_img_kitchen").html('<img id="db_image" src={% static '' %}website/images/'+a+'>');   
-					    }
-				});
+                  type: "GET",
+                  url: url,
+                  success:
+                    function(data){
+                       console.log(url);
+                       console.log(value);
+                       var a=data;
+                       console.log(a); 
+                       $("#change_img_chimney").html('<img id="db_image_4" src={% static '' %}website/images/'+a+'>');   
+                    }
+                });
+
                 $("#kitchen_product_Cat2").show();
+                $('ul.sub-menu').hide();
+
                 $(document).on('click','#kitchen_panel',function(){
                     $("#sub_Cat_kitchen").hide();
                     $("#db_image").hide();
+                    $('ul.sub-menu').hide();
                 });
             });
         </script>
-        <script type="text/javascript">                       	
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
 
-            window.onclick = function(event) {
-                if (!event.target.matches('.dropbtn')) {
+        <!-- cart dropdown script -->     
+           
+        <script type="text/javascript">
+            $(document).ready(function() {
+                
+                $('#main-menu > li:has(ul.sub-menu)').addClass('parent');
+                $('ul.sub-menu > li:has(ul.sub-menu) > a').addClass('parent');
 
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var i;
-                    for (i = 0; i < dropdowns.length; i++) {
-                       var openDropdown = dropdowns[i];
-                       if (openDropdown.classList.contains('show')) {
-                           openDropdown.classList.remove('show');
-                       }
-                    }
-                }
-            }
+                $(window).resize(function() {
+                  if ($(window).width() > 700) {
+                    $('#main-menu').removeAttr('style');
+                  }
+                });
+                
+                var prod_name, prod_price, prod_id,sum,diff,url_C,url_D;
+
+                $(document).on('click',"img.dropbtn",function(){
+
+                  $("ul.sub-menu").html(' ');
+                  $("ul.sub-menu").append('<li id="cart_header">Product<span id="cost_header">Price</span></li>');
+
+                  sum=0;     
+                  url_D="http://127.0.0.1:8000/get_dropdown/{{user.id}}/";
+                  url_C="http://127.0.0.1:8000/get_cart/{{user.id}}/";
+
+                  $.ajax({
+                    type: "GET",
+                    url: url_D,
+                    success:
+                      function(wb){
+                         console.log(url_C);
+                         for(i in wb){  
+                            var a=JSON.parse(wb[i]);
+                            console.log(a[0]);
+                            prod_name = a[0].fields.product_name;
+                            prod_price = a[0].fields.price;
+                            prod_id=a[0].pk;
+                            $("ul.sub-menu").append('<li id="cart_list" class="prod'+ prod_id +'">'+ prod_name +'<span id="total_cost'+i+'">'+ prod_price +'</span><img id="cancel_btn" data-price="'+ prod_price +'" data-product="'+ prod_id +'" src="{% static '' %}website/images/cancel-music.png"></li>');
+
+                            sum += prod_price;
+                           
+                          }    
+                           
+                          $("ul.sub-menu").append('<li id="total_list">Total<span id="total_cost">'+ sum +'</span></li>');
+                          $("ul.sub-menu").append('<li><button id="checkout_btn">Checkout</button></li>');
+                      }        
+                  });
+                });
+
+                $(document).on('click',"#checkout_btn",function(){
+                     window.location.href= "http://127.0.0.1:8000/get_cart/{{user.id}}";
+                });  
+
+                $(document).on('click','#main-menu > li.parent > a',function(){
+                     $('ul.sub-menu').toggle();
+                });
+
+               $(document).on('click','#cancel_btn',function(){
+                   var value= $(this).attr("data-product");
+                   var price_of_product= $(this).attr("data-price");
+
+                   var url1="http://127.0.0.1:8000/remove_from_cart/{{user.id}}/"+value;
+
+                   $.ajax({
+                     type: "GET",
+                     url: url1,
+                     success:
+                      function(data){
+                         console.log(url1);
+                         console.log(value);
+                         console.log('success');
+                         console.log(price_of_product);
+                         $(".prod"+value).hide();
+                         
+                         sum-=price_of_product;
+
+                         $("li#total_list").html('<li id="total_after_diff">Total<span id="total_cost_after_diff">'+ sum +'</span></li>');
+                      }
+                   });
+                });
+
+              });
         </script>
 
-		<script>
-			$(function() {
-				
-				Boxlayout.init();
-				$("#living_product_Cat1,#living_product_Cat2,#kitchen_product_Cat1,#kitchen_product_Cat2, #sub_Cat_living,#sub_Cat_kitchen").hide();
-				$("#button_living").click(function(){
+        
+    <!-- bedroom and living room sections script -->
+
+    <script>
+      $(function() {
+        
+        Boxlayout.init();
+        $("#living_product_Cat1,#living_product_Cat2,#kitchen_product_Cat1,#kitchen_product_Cat2, #sub_Cat_living,#sub_Cat_kitchen").hide();
+        $('ul.sub-menu').hide();
+        $("#button_living").click(function(){
                     $("#sub_Cat_living").toggle();
                     $("#living_product_Cat1,#living_product_Cat2,#kitchen_product_Cat1,#kitchen_product_Cat2, #sub_Cat_kitchen").hide();
-				});
-				$("#button_kitchen").click(function(){
+                    $('ul.sub-menu').hide();
+        });
+        $("#button_kitchen").click(function(){
                     $("#sub_Cat_kitchen").toggle();
                     $("#living_product_Cat1,#living_product_Cat2,#kitchen_product_Cat1,#kitchen_product_Cat2, #sub_Cat_living").hide();
-				});
-				$("#living_subCat1").click(function(){
+                    $('ul.sub-menu').hide();
+        });
+        $("#living_subCat1").click(function(){
                     $("#living_product_Cat1").toggle();
                     $("#living_product_Cat2,#kitchen_product_Cat1,#kitchen_product_Cat2").hide();
-				});
-				$("#living_subCat2").click(function(){
+                    $('ul.sub-menu').hide();
+        });
+        $("#living_subCat2").click(function(){
                     $("#living_product_Cat2").toggle();
                     $("#living_product_Cat1,#kitchen_product_Cat1,#kitchen_product_Cat2").hide();
-				});
-	            $("#kitchen_subCat1").click(function(){
+                    $('ul.sub-menu').hide();
+        });
+              $("#kitchen_subCat1").click(function(){
                     $("#kitchen_product_Cat1").toggle();
                     $("#living_product_Cat2,#living_product_Cat1,#kitchen_product_Cat2").hide();
-				});
-				$("#kitchen_subCat2").click(function(){
+                    $('ul.sub-menu').hide();
+        });
+        $("#kitchen_subCat2").click(function(){
                     $("#kitchen_product_Cat2").toggle();
                     $("#living_product_Cat1,#kitchen_product_Cat1,#living_product_Cat2").hide();
-				});
-				$("#living_product1").click(function(){
-                    
-				});
-			});
-		</script>
-	</body>
+                    $('ul.sub-menu').hide();
+        });
+      });
+    </script>
+
+  </body>
 </html>

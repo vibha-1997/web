@@ -1,0 +1,131 @@
+body{
+	background: url("../images/login_back.jpg") no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#login_box{
+	width: 30%;
+	background-color: rgba(255,255,255,0.7);
+	display: block;
+	margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    border-radius: 7px;
+}
+#login_head{
+	background-color: #455a64;
+    width: 80%;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+    margin-top: -27%;
+    color: white;
+    margin-bottom: 5rem;
+}
+
+input[type="text"]{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #455a64;
+    width: 90%;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    color: #455a64; 
+}
+input[type="password"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #455a64;
+    width: 90%;
+    margin-bottom: 5rem;
+    margin-left: 2rem;
+    color: #455a64; 
+}
+input[type="text"]:focus,input[type="password"]:focus{
+	border-bottom: 2px solid #90a4ae;
+}
+#registration_check{
+	font-size: 16px;
+	margin-left: 4rem;
+}
+button#submit{
+	display: block;
+	padding: 1rem 8rem;
+	border-radius: 5px;
+	margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: #455a64;
+    border: none;
+    margin-bottom: 5rem;
+    outline-style: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+button#signup{
+	background-color: transparent;
+	border: 2px solid #455a64;
+	border-radius: 4px;
+	margin-left: 2rem;
+	padding: 0.5rem;
+	font-size: 15px;
+	color: #455a64;
+    outline-style: none;
+}
+button#signup:hover{
+    background-color: #455a64;
+    color: white;
+}
+input#id_username {
+    outline-style: none;
+    margin-bottom: 4rem;
+}
+input#id_password {
+    outline-style: none;
+    margin-bottom: 6rem;
+}
+label {
+    margin-bottom: 20px;
+    margin-left: 2rem;
+    color: #455a64;
+}
+
+@media (max-width: 700px){
+    div#login_box {
+       width: 92%;
+       margin-top: 14rem;
+    }
+    #registration_check{
+        margin-left: -1.7rem;
+    }
+    div#signup_box {
+       width: 90%;
+       margin-top: 12rem;
+    }
+}
+@media(max-width: 768px) and (min-width: 730px){
+    div#login_box {
+       width: 54%;
+       margin-top: 15rem;
+    }
+    div#signup_box {
+       width: 60%;
+       margin-top: 12rem;
+    }
+}
+@media(max-width: 1024px) and (min-width: 900px){
+    div#login_box {
+       width: 40%;
+       margin-top: 15rem;
+    }
+    div#signup_box {
+       width: 50%;
+       margin-top: 12rem;
+    }
+}
