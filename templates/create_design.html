@@ -99,6 +99,16 @@ s0.parentNode.insertBefore(s1,s0);
                                       {% endfor %}
                                   </ul>
                               </li>
+<!--added here-->
+<li  id="living_subCat2"><button id="btn_subCat2">{{product_cat.4}}</button>
+                                  <ul id="living_product_Cat2"> 
+                                      {%for product in product_ids%}
+                                        {% if product.pc_name|stringformat:"s" == product_cat.4|stringformat:"s" %}
+                                          <li  id="living_product2"><img id="btn" class="pro_id_0" data-product={{product.id}} src="{% static '' %}website/images/{{product.photo}}"/></li>
+                                        {%endif%}
+                                      {% endfor %}
+                                  </ul>
+                              </li>
                           </ul>
                       </li> 
                       <li id="main_panel_living" style="color: black;">
